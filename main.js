@@ -50,7 +50,25 @@ document.getElementById(inputId).onkeyup = function() {
 
 //scroll to top
 
+var rootElement = document.documentElement;
 const btnScrollToTop = document.getElementById("btnScrollToTop");
+
+function handleScroll() {
+	var scrollTotal = rootElement.scrollHeight - rootElement.clientHeight;
+
+
+	if ((rootElement.scrollTop / scrollTotal ) > 0.02 ) {
+
+		btnScrollToTop.classList.add('showBtn')
+	} else {
+	
+		btnScrollToTop.classList.remove('showBtn')
+	}
+
+}
+
+document.addEventListener('scroll', handleScroll)
+
 
 btnScrollToTop.addEventListener("click", function() {
 
