@@ -57,7 +57,7 @@ function handleScroll() {
 	var scrollTotal = rootElement.scrollHeight - rootElement.clientHeight;
 
 
-	if ((rootElement.scrollTop / scrollTotal ) > 0.02 ) {
+	if ((rootElement.scrollTop / scrollTotal ) > 0.01 ) {
 
 		btnScrollToTop.classList.add('showBtn')
 	} else {
