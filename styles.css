@@ -181,7 +181,7 @@
     color: #082742;
 }
 
-#btnScrollToTop {
+.btnScrollToTop {
     position: fixed;
     right: 15px;
     bottom: 40px;
@@ -194,20 +194,27 @@
     outline: none;
     cursor: pointer;
     border: none;
-    transform: scale(1);
+    transform: translateY(100px);
+    transition: all .5s ease;
+    opacity: 0;
 
 }
 
-#btnScrollToTop:hover {
+.btnScrollToTop:hover {
     background: #FBF6F6;
     color: #082742;
 }
 
-#btnScrollToTop:active {
+.btnScrollToTop:active {
     background: #FBF6F6;
     color: #082742;
 }
 
+
+.showBtn {
+    opacity: 1;
+    transform: translateY(0);
+}
 
 
 /* .storeButton {
@@ -271,6 +278,7 @@
     position: fixed;
     background-color: white;
     width: 100%;
+    padding-left: 8px;
     padding-top: 8px;
     padding-bottom: 8px;
     bottom: 0px;
